@@ -1,0 +1,21 @@
+.top-center {
+  position: fixed;
+  top: -10;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-list {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}

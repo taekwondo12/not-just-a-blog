@@ -149,6 +149,30 @@ img {
   overflow-wrap: break-word;
 }
 
+.post a:not(.back-link) {
+  color: #ffbd59;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.post a:not(.back-link):hover,
+.post a:not(.back-link):focus-visible {
+  color: #ffd08d;
+  opacity: 0.95;
+}
+
+.light-mode .post a:not(.back-link) {
+  color: #8a4a00;
+}
+
+.light-mode .post a:not(.back-link):hover,
+.light-mode .post a:not(.back-link):focus-visible {
+  color: #b76500;
+}
+
 .post h1 {
   font-size: 1.6em;
   margin-bottom: 4px;

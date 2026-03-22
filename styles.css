@@ -12,6 +12,7 @@ body {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 100;
 }
 
 .top-bar {
@@ -165,10 +166,10 @@ img {
   background: #f0f0f0;
 }
 
-.highlight .k, .highlight .kd, .highlight .kn { color: #c678dd; }
-.highlight .nf, .highlight .n  { color: #61afef; }
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kr { color: #c678dd; }
+.highlight .nf { color: #61afef; }
 .highlight .s, .highlight .s1, .highlight .s2 { color: #98c379; }
-.highlight .c, .highlight .c1  { color: #5c6370; font-style: italic; }
+.highlight .c, .highlight .c1, .highlight .cm { color: #5c6370; font-style: italic; }
 .highlight .mi, .highlight .mf { color: #d19a66; }
-.highlight .o               { color: #56b6c2; }
-.highlight .kt              { color: #e5c07b; }
+.highlight .o { color: #56b6c2; }
+.highlight .kt, .highlight .nc { color: #e5c07b; }

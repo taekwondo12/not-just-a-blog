@@ -39,6 +39,7 @@ body {
   font-size: 24px;
   padding: 0;
   transition: color 0.2s ease;
+  filter: drop-shadow(0 0 6px #ffcc00);
 }
 
 .theme-toggle:hover,
@@ -49,6 +50,7 @@ body {
 
 .light-mode .theme-toggle {
   color: black;
+  filter: none;
 }
 
 .nav-list {

@@ -3,19 +3,16 @@
   --text-color: #ffffff;
   --link-color: #ffbd59;
   --link-hover-color: #ffd08d;
-  --link-light-color: #8a4a00;
-  --link-light-hover-color: #b76500;
   --code-bg: rgba(255, 255, 255, 0.04);
   --code-border: rgba(255, 255, 255, 0.28);
-  --header-top: calc(20px + env(safe-area-inset-top));
   --content-max-width: 680px;
-  --content-top-margin: 84px;
-  --content-bottom-margin: 60px;
 }
 
 .light-mode {
   --bg-color: #ffffff;
   --text-color: #000000;
+  --link-color: #8a4a00;
+  --link-hover-color: #b76500;
   --code-bg: rgba(0, 0, 0, 0.04);
   --code-border: rgba(0, 0, 0, 0.28);
 }
@@ -23,6 +20,7 @@
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-y: scroll;
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: Georgia, "Times New Roman", serif;
@@ -31,17 +29,13 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Header */
-.top-center,
+
 .page-header {
-  position: fixed;
-  top: var(--header-top);
-  left: 50%;
-  z-index: 100;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 12px;
-  transform: translateX(-50%);
+  padding: 20px 0 12px;
 }
 
 .theme-toggle {
@@ -59,7 +53,7 @@ body {
   filter: none;
 }
 
-/* Landing nav */
+
 .nav-list {
   position: fixed;
   top: 50%;
@@ -98,7 +92,7 @@ img {
   transform: scale(0.95);
 }
 
-/* Typography and links */
+
 .site-title,
 .back-link,
 .post-list a {
@@ -112,10 +106,10 @@ img {
   opacity: 0.7;
 }
 
-/* Post list and post page */
+
 .post-list {
   max-width: var(--content-max-width);
-  margin: var(--content-top-margin) auto var(--content-bottom-margin);
+  margin: 20px auto 60px;
   padding: 0;
   list-style: none;
   text-align: center;
@@ -133,7 +127,7 @@ img {
 
 .post {
   max-width: var(--content-max-width);
-  margin: var(--content-top-margin) auto var(--content-bottom-margin);
+  margin: 20px auto 60px;
   padding: 0 20px;
   font-size: 18px;
   line-height: 1.6;
@@ -179,16 +173,7 @@ img {
   opacity: 0.95;
 }
 
-.light-mode .post a:not(.back-link) {
-  color: var(--link-light-color);
-}
 
-.light-mode .post a:not(.back-link):hover,
-.light-mode .post a:not(.back-link):focus-visible {
-  color: var(--link-light-hover-color);
-}
-
-/* Code blocks */
 .highlight {
   overflow-x: auto;
   border-left: 3px solid var(--code-border);
@@ -242,7 +227,7 @@ img {
   color: #e5c07b;
 }
 
-/* Mobile */
+
 @media (max-width: 768px) {
   .nav-list {
     max-height: 80vh;
@@ -256,7 +241,6 @@ img {
   }
 
   .post {
-    padding: 0 20px;
     padding-left: max(20px, env(safe-area-inset-left));
     padding-right: max(20px, env(safe-area-inset-right));
     font-size: 16px;

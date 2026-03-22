@@ -167,9 +167,10 @@ img {
 }
 
 .highlight {
-  background: #1a1a1a;
-  border-radius: 6px;
-  padding: 16px;
+  background: transparent;
+  border-left: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+  padding: 12px 0 12px 14px;
   overflow-x: auto;
   font-size: 0.8em;
 }
@@ -179,7 +180,10 @@ img {
   font-family: "Courier New", monospace;
 }
 
-.light-mode .highlight { background: #f0f0f0; }
+.light-mode .highlight {
+  background: transparent;
+  border-left-color: rgba(0, 0, 0, 0.2);
+}
 
 .highlight .k, .highlight .kd, .highlight .kn, .highlight .kr { color: #c678dd; }
 .highlight .nf { color: #61afef; }

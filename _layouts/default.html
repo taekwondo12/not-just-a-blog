@@ -6,11 +6,9 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
   </head>
   <body>
-    <div class="top-center">
-      <div class="top-bar">
-        <a href="/" class="site-title">A blog</a>
-        <button class="theme-toggle" onclick="toggle_light_mode()">☀</button>
-      </div>
+    <div class="page-header">
+      <a href="{{ site.baseurl }}/" class="site-title">A blog</a>
+      <button class="theme-toggle" onclick="toggle_light_mode()">☀</button>
     </div>
 
     {{ content }}

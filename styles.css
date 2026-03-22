@@ -91,6 +91,13 @@ img {
   text-decoration: none;
 }
 
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+}
+
 .post-list {
   list-style: none;
   padding: 0;

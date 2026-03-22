@@ -1,2 +1,3 @@
 title: A blog
+baseurl: "/not-just-a-blog"
 permalink: /:categories/:title/

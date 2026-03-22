@@ -61,6 +61,25 @@ listen sock 16
 
 So where does sharding come in?
 
-Sharding means splitting one world's workload across multiple server processes, each responsible for a subset of simulation. For an MMO-style map server, a natural first shard key is map or zone. Instead of one process owning every player and every map, shard A can own maps 1–50, shard B maps 51–100, and so on.
+In this context, sharding means partitioning live game simulation across multiple server processes, with each process responsible for a subset of world state (for example, a map range or zone set). Instead of one process owning all players and all maps, ownership is split to reduce contention and fanout pressure.
 
-The important point: sharding does not have to mean separate isolated realms. You can still provide a shared-world experience by keeping identity, chat, party, and social systems global while distributing map simulation. Our current codebase is exactly what a good prototype should be - clear and honest about what it is.
+For Endless Online, a practical first step is map- or zone-based partitioning. That aligns naturally with movement boundaries and lets us keep implementation incremental: first reduce global broadcasts with interest management, then introduce shard ownership and handoff paths.
+
+This does not automatically imply separate isolated realms. A single shared-world experience can still be preserved by keeping account identity, chat, and social systems logically global while simulation is partitioned underneath.
+
+## References
+
+- Martin Kleppmann, *Designing Data-Intensive Applications*
+  <https://dataintensive.net/>
+
+- Microsoft Azure Architecture Center, "Sharding pattern"
+  <https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding>
+
+- Gabriel Gambetta, "Fast-Paced Multiplayer (Networking)"
+  <https://www.gabrielgambetta.com/client-server-game-architecture.html>
+
+- Gaffer On Games, "What Every Programmer Needs To Know About Game Networking"
+  <https://gafferongames.com/post/what_every_programmer_needs_to_know_about_game_networking/>
+
+- Corbett et al., "Spanner: Google's Globally-Distributed Database" (OSDI 2012)
+  <https://www.usenix.org/conference/osdi12/technical-sessions/presentation/corbett>

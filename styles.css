@@ -92,6 +92,7 @@ img {
   max-width: 80vw;
   height: auto;
   filter: invert(1);
+  background-color: #1c1c1c;
 }
 
 .light-mode img {

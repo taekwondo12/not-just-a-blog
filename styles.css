@@ -38,6 +38,15 @@ body {
   padding: 20px 0 12px;
 }
 
+@keyframes flicker {
+  0%, 100% { filter: drop-shadow(0 0 6px #e8900a); }
+  92%       { filter: drop-shadow(0 0 6px #e8900a); }
+  93%       { filter: drop-shadow(0 0 2px #e8900a); }
+  94%       { filter: drop-shadow(0 0 6px #e8900a); }
+  96%       { filter: drop-shadow(0 0 1px #e8900a); }
+  97%       { filter: drop-shadow(0 0 6px #e8900a); }
+}
+
 .theme-toggle {
   padding: 8px;
   border: none;
@@ -46,10 +55,11 @@ body {
   cursor: pointer;
   font-size: 24px;
   transition: color 0.2s ease;
-  filter: drop-shadow(0 0 6px #e8900a);
+  animation: flicker 6s infinite;
 }
 
 .light-mode .theme-toggle {
+  animation: none;
   filter: none;
 }
 

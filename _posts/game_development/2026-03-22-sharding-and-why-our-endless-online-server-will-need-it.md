@@ -2,6 +2,7 @@
 layout: post
 title: "Sharding, and Why Our Endless Online Server Will Need It"
 date: 2026-03-22
+category: game_development
 ---
 
 Right now, our [Endless Online Haskell server](https://github.com/jessjessjade12-cyber/taekserv) is intentionally simple, and that simplicity is a strength. It is easy to reason about, easy to run, and a great foundation for protocol work. But as soon as we think about scaling to higher player counts, we can already see architectural pressure points that suggest a future move toward sharding.

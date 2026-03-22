@@ -141,6 +141,14 @@ img {
   font-size: 18px;
 }
 
+.post p,
+.post li {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
 .post h1 {
   font-size: 1.6em;
   margin-bottom: 4px;

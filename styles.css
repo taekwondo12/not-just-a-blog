@@ -167,22 +167,23 @@ img {
 }
 
 .highlight {
-  background: transparent;
-  border-left: 3px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0;
-  padding: 12px 0 12px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid rgba(255, 255, 255, 0.28);
+  border-radius: 6px;
+  padding: 12px 14px;
   overflow-x: auto;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .highlight pre {
   margin: 0;
   font-family: "Courier New", monospace;
+  line-height: 1.5;
 }
 
 .light-mode .highlight {
-  background: transparent;
-  border-left-color: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.04);
+  border-left-color: rgba(0, 0, 0, 0.28);
 }
 
 .highlight .k, .highlight .kd, .highlight .kn, .highlight .kr { color: #c678dd; }

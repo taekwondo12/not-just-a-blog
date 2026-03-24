@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Lighting The Endless Online World (Part 1): From Zero To Atmosphere"
-date: 2026-03-22
+date: 2026-03-24
 category: game_development
 ---
 
@@ -98,7 +98,6 @@ For quick iteration, keyboard controls are built into placement: `Ctrl/Cmd + [ ]
 
 Most of this work is already done. I just split the writing into two parts because covering everything at once would make the post too broad. The next one can focus on stronger wall and object occlusion, richer presets, and better long-caster behavior.
 
-That was the point. Not to turn EO into a different game, just to see what it looks like when you give its nights a bit more warmth.
 
 ## Result
 
